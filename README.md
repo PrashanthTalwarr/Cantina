@@ -115,6 +115,38 @@ Optional but recommended:
 - `SLACK_WEBHOOK_URL` — pipeline completion + hot lead alerts
 - `RESEND_TEST_EMAIL` — redirect all emails to one address during testing
 
+---
+
+### Getting a HubSpot API Key
+
+1. Log in to [HubSpot](https://app.hubspot.com)
+2. Go to **Settings** (gear icon, top right)
+3. In the left sidebar go to **Integrations → Private Apps**
+4. Click **Create a private app**
+5. Give it a name (e.g. `Cantina Pipeline`)
+6. Go to the **Scopes** tab and add the following:
+   - `crm.objects.companies.read`
+   - `crm.objects.companies.write`
+   - `crm.schemas.companies.write`
+   - `crm.objects.contacts.read`
+   - `crm.objects.contacts.write`
+   - `crm.schemas.contacts.read`
+   - `crm.schemas.contacts.write`
+7. Click **Create app** → **Continue creating**
+8. Copy the token shown — this is your `HUBSPOT_API_KEY`
+
+---
+
+### Getting a Slack Webhook URL
+
+1. Go to [api.slack.com/apps](https://api.slack.com/apps) and click **Create New App**
+2. Choose **From scratch** → give it a name (e.g. `Cantina Pipeline`) → select your workspace
+3. In the left sidebar go to **Incoming Webhooks**
+4. Toggle **Activate Incoming Webhooks** to On
+5. Click **Add New Webhook to Workspace**
+6. Select the channel you want alerts posted to → click **Allow**
+7. Copy the webhook URL shown — this is your `SLACK_WEBHOOK_URL`
+
 ### 3. Database
 
 ```bash
