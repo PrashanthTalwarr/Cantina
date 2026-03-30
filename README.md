@@ -29,7 +29,7 @@ flowchart TD
     B --> C[Score\n100-pt composite model]
     C --> D{Score ≥ 75?}
     D -- No --> E[PostgreSQL\nStored, not actioned]
-    D -- Yes --> F[Find Contacts\nGitHub contributors + Claude web search\nin production would use Apollo.io]
+    D -- Yes --> F[Find Contacts\nGitHub contributors + Claude web search\n(in production would use Apollo.io)]
     F --> G[Claude API\nGenerate personalized email]
     G --> H[Resend\nDeliver email]
     H --> I[HubSpot\nCompany + Contact created]
