@@ -292,6 +292,4 @@ If we book 10 discovery calls:
 
 ---
 
-## License
 
-Built for Cantina/Spearbit take-home evaluation.
