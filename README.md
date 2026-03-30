@@ -28,7 +28,7 @@ flowchart TD
     A[DeFiLlama API\nTVL · Categories · Chains] --> B[Enrich\nGitHub · Audit History · Funding]
     B --> C[Score\n100-pt composite model]
     C --> D{Score ≥ 75?}
-    D -- No --> E[Discard]
+    D -- No --> E[PostgreSQL\nStored, not actioned]
     D -- Yes --> F[Find Contacts\nGitHub contributors + Claude web search]
     F --> G[Claude API\nGenerate personalized email]
     G --> H[Resend\nDeliver email]
