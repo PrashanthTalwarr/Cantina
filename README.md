@@ -1,8 +1,6 @@
 # Cantina Discovery Pipeline
 
-AI-powered GTM system for Web3 security sales. Discovers, scores, and reaches out to Web3 protocols most likely to need Cantina's services — security competitions, Clarion AI monitoring, and managed bug bounties.
-
-Built as a take-home submission for the AI GTM Engineer role at Cantina/Spearbit.
+AI-powered GTM system for Web3 security sales. Discovers, scores, and reaches out to Web3 protocols most likely to need Cantina's services — security competitions, Clarion AI monitoring, and managed bug bounties. Can be extended to Web2 security as well.
 
 ---
 
