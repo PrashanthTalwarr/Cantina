@@ -10,7 +10,7 @@ Built as a take-home submission for the AI GTM Engineer role at Cantina/Spearbit
 
 Web3 engineering teams are using Copilot, Cursor, and Claude Code to write Solidity and Rust smart contracts faster than ever. But AI-generated smart contract code is uniquely dangerous — a single vulnerability means **immediate, irreversible loss of funds**. Traditional audit cycles can't keep pace with AI-accelerated shipping. Cantina's platform — combining Clarion (AI code analyzer), 12,800+ researchers, competitions, and bug bounties — is built for this velocity.
 
-**Why Hypothesis A over B:** Hypothesis A is a survival problem (get exploited or don't). Hypothesis B (tool consolidation) is an efficiency problem. Urgency books discovery calls. [Full analysis →](cantina-discovery-pipeline/docs/HYPOTHESIS.md)
+**Why Hypothesis A over B:** Hypothesis A is a survival problem (get exploited or don't). Hypothesis B (tool consolidation) is an efficiency problem. Urgency books discovery calls.
 
 ---
 
@@ -46,9 +46,7 @@ cantina-discovery-pipeline/
 │   ├── scoring_weights.json   ICP definition — all scoring rules and discovery settings
 │   └── .env.example           API keys and secrets template
 └── docs/
-    ├── HYPOTHESIS.md
-    ├── INSTRUMENTATION.md
-    └── OUTREACH.md
+    └── images/               Screenshots of the working system
 ```
 
 ---
@@ -257,8 +255,6 @@ The UI header shows live token usage and estimated cost for the current session.
 ---
 
 ## Instrumentation
-
-[Full plan →](cantina-discovery-pipeline/docs/INSTRUMENTATION.md)
 
 If we book 10 discovery calls:
 
