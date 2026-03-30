@@ -23,6 +23,23 @@ Web3 engineering teams are using Copilot, Cursor, and Claude Code to write Solid
 7. **CRM** — Pushes leads and contacts to HubSpot (company + contact per person emailed)
 8. **DB** — Persists everything to PostgreSQL (leads, contacts, outreach history)
 
+```mermaid
+flowchart TD
+    A[DeFiLlama API\nTVL · Categories · Chains] --> B[Enrich\nGitHub · Audit History · Funding]
+    B --> C[Score\n100-pt composite model]
+    C --> D{Score ≥ 75?}
+    D -- No --> E[Discard]
+    D -- Yes --> F[Find Contacts\nGitHub contributors + Claude web search]
+    F --> G[Claude API\nGenerate personalized email]
+    G --> H[Resend\nDeliver email]
+    H --> I[HubSpot\nCompany + Contact created]
+    H --> J[PostgreSQL\nLeads · Contacts · Outreach history]
+    H --> K[Slack\nPipeline alert]
+    I --> L{Prospect replies?}
+    L -- Yes --> M[HubSpot Deal created\nStatus → CONNECTED]
+    M --> N[Slack reply alert]
+```
+
 ---
 
 ## Architecture
