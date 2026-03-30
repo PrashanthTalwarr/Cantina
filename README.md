@@ -66,6 +66,7 @@ cantina-discovery-pipeline/
 | CRM | HubSpot API |
 | Email | Resend |
 | Monitoring | DeFiLlama hacks/funding APIs |
+| Slack | Webhook (via requests) |
 
 ---
 
