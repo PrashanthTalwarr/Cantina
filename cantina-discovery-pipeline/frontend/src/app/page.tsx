@@ -352,7 +352,7 @@ function ChatMessage({ msg }: { msg: Message }) {
             </span>
           )}
         </div>
-        <div className="text-xs text-gray-600 mt-1 px-1">
+        <div className="text-xs text-gray-600 mt-1 px-1" suppressHydrationWarning>
           {msg.timestamp.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
         </div>
       </div>

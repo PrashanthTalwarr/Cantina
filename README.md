@@ -166,6 +166,8 @@ npm run dev
 uvicorn scripts.api:app --port 8000 --reload
 ```
 
+Once running, the interactive API docs are available at `http://localhost:8000/docs` — all endpoints are listed and callable directly from the browser.
+
 ---
 
 ## Running the Pipeline
@@ -173,6 +175,28 @@ uvicorn scripts.api:app --port 8000 --reload
 Open `http://localhost:3000` — click **Run Pipeline** in the UI or chat with the agent.
 
 The pipeline runs fully from the UI. No CLI needed.
+
+| URL | What it is |
+|-----|-----------|
+| `http://localhost:3000` | Next.js UI — lead dashboard, chat agent, draft drawer |
+| `http://localhost:8000/docs` | FastAPI interactive docs — all REST endpoints |
+
+### Testing a Reply
+
+To simulate a prospect replying, use the `POST /api/outreach/replied` endpoint directly from `http://localhost:8000/docs`:
+
+```json
+{
+  "protocol_name": "Ethena",
+  "persona_name": "Guy Young",
+  "reply_body": "Thanks for reaching out, happy to chat."
+}
+```
+
+This fires three things automatically:
+1. **PostgreSQL** — outreach status updated to `replied`
+2. **HubSpot** — contact status updated from `ATTEMPTED_TO_CONTACT` → `CONNECTED`, and a Deal is created in the Cantina Outreach pipeline
+3. **Slack** — alert fired with the protocol name, persona, and reply content
 
 ### Pipeline Results
 
